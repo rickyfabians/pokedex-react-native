@@ -1,0 +1,54 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "apps": {
+    "ios": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/pokedexreactnative.app"
+    },
+    "android": {
+      "type": "android.apk",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_3a_API_30_x86"
+      }
+    }
+  },
+  "configurations": {
+    "ios": {
+      "device": "simulator",
+      "app": "ios"
+    },
+    "ios.debug": {
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/pokedexreactnative.app",
+      "build": "xcodebuild -workspace ios/pokedexreactnative.xcworkspace -scheme pokedexreactnative -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 12"
+      }
+    },
+    "android": {
+      "device": "emulator",
+      "app": "android"
+    },
+    "android.debug": {
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build":"cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_3a_API_30_x86"
+      }
+    }
+  }
+}
