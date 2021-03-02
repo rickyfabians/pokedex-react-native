@@ -17,7 +17,6 @@ const Filter = ({ setModalVisible, setListOfPoke, setListOfCheckBox, setName }) 
   }, [])
   const setFilter = (url) => {
     FilterBy(url, ({ data }) => {
-      console.log({ data })
       const pokemon = data?.pokemon?.reduce((result = [], value) => {
         result.push(value.pokemon)
         return result

@@ -7,6 +7,8 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": "feat:search poke, filter poke by type and ablity, compare poke and predic win, poke details",
+    "githubUrl": "https://github.com/rickyfabians/pokedex-react-native"
   }
 }

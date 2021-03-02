@@ -12,7 +12,6 @@ const Details = ({ route }) => {
 
     }
   }, [])
-  console.log({ data, fetching })
   if (fetching) return <ActivityIndicator style={{ alignSelf: 'center', height: '100%' }} size='large' color='red' />
   return (
     <View style={{ flex: 1, padding: 10 }}>

@@ -42,9 +42,7 @@ const useFetch = () => {
     let response = {}
     try {
       dispatch({ type: 'request' })
-      console.log(`${BaseUrl}${param}`)
       const res = await axios.get(`${BaseUrl}${param}`)
-      console.log({ res })
       response = res
       await resolved(res)
     } catch (error) {
