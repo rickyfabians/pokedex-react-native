@@ -27,7 +27,7 @@ const Filter = ({ setModalVisible, setListOfPoke, setListOfCheckBox, setName }) 
       setModalVisible(false)
     })
   }
-  const ListOfAtribute = ({listofatribute, param}) => (
+  const ListOfAtribute = ({ listofatribute, param }) => (
     <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
       {listofatribute?.results?.map((e, index) => (
         <ViewAnimated key={index} delay={index / 50} useNativeDriver animation='zoomIn'>
@@ -40,7 +40,7 @@ const Filter = ({ setModalVisible, setListOfPoke, setListOfCheckBox, setName }) 
   if (fetching) return <ActivityIndicator style={{ alignSelf: 'center', height: '100%' }} size='large' color='red' />
   return (
     <SafeAreaView style={{ padding: 10 }}>
-      <TouchableOpacity onPress={() => setModalVisible(false)} style={{ marginBottom: 30 }}>
+      <TouchableOpacity testID='modalBack' onPress={() => setModalVisible(false)} style={{ marginBottom: 30 }}>
         <Icons name='arrowleft' size={30} />
       </TouchableOpacity>
       <View>

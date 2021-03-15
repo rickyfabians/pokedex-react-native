@@ -27,13 +27,14 @@ const Home = ({ navigation }) => {
   const Headers = () => (
     <View style={{ flexDirection: 'row', padding: 10, alignItems: 'center' }}>
       <TextInput
+        testID='searchPoke'
         onChangeText={e => setName(e)}
         value={name}
         onSubmitEditing={(e) => get(`pokemon/${name.toLowerCase()}`)}
         placeholder='Contoh: Pikachu...'
         style={{ height: 40, borderWidth: 1, paddingHorizontal: 5, flex: 1, marginRight: 10 }}
       />
-      <Icons onPress={() => setModalVisible(true)} name='filter' size={28} />
+      <Icons testID='filterIcons' onPress={() => setModalVisible(true)} name='filter' size={28} />
     </View>
   )
   const ButtonCompere = () => (
